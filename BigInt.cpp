@@ -446,3 +446,87 @@ char * BigInt::__repr__()
 {
 		return getString();
 }
+bool BigInt::operator>(const long long int B)
+{
+	return cmp(*this, B) > 0;
+}
+
+bool BigInt::operator<(const long long int B)
+{
+	return cmp(*this, B) < 0;
+}
+
+bool BigInt::operator<=(const long long int B)
+{
+	return cmp(*this, B) <= 0;
+}
+
+bool BigInt::operator>=(const long long int B)
+{
+	return cmp(*this, B) >= 0;
+}
+
+bool BigInt::operator==(const long long int B)
+{
+	return cmp(*this, B) == 0;
+}
+
+bool BigInt::operator!=(const long long int B)
+{
+	return cmp(*this, B) != 0;
+}
+
+BigInt BigInt::operator +=(const long long int B)
+{
+	return *this = *this + (BigInt) B;
+}
+
+BigInt BigInt::operator -=(const long long int B)
+{
+	return *this = *this - (BigInt) B;
+}
+
+BigInt BigInt::operator *=(const long long int B)
+{
+	return *this = *this * (BigInt) B;
+}
+
+BigInt BigInt::operator /=(const long long int B)
+{
+	return *this = *this / (BigInt) B;
+}
+
+BigInt BigInt::operator %=(const long long int B)
+{
+	return *this = *this % (BigInt) B;
+}
+
+BigInt BigInt::operator ^=(const long long int B)
+{
+	return *this = *this ^ (BigInt) B;
+}
+
+BigInt BigInt::operator+(const long long int B)const
+{
+	return *this + (BigInt) B;
+}
+BigInt BigInt::operator-(const long long int B)const
+{
+	return *this - (BigInt) B;
+}
+BigInt BigInt::operator*(const long long int B)const
+{
+	return *this * (BigInt) B;
+}
+BigInt BigInt::operator/(const long long int B)const
+{
+	return *this / (BigInt) B;
+}
+BigInt BigInt::operator%(const long long int B)const
+{
+	return *this % (BigInt) B;
+}
+BigInt BigInt::operator^(const long long int B)const
+{
+	return *this ^ (BigInt) B;
+}

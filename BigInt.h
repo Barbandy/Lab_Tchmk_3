@@ -46,10 +46,31 @@ public:
 	BigInt operator --();	  
 	BigInt operator ++(int);   
 	BigInt operator --(int); 
-
-	char* __str__();		//for Python //output
+	
+	//for Python
+	char* __str__();		 //output
 	char* __repr__();
 	
+	bool operator > (const long long int B);
+	bool operator < (const long long int B);
+	bool operator <= (const long long int B);
+	bool operator >= (const long long int B);
+	bool operator == (const long long int B);
+	bool operator != (const long long int B);
+
+	BigInt operator +=(const long long int B); 	   
+	BigInt operator -=(const long long int B);	   
+	BigInt operator *=(const long long int B);	   
+	BigInt operator /=(const long long int B);		
+	BigInt operator %=(const long long int B);		
+	BigInt operator ^=(const long long int B);
+	
+	BigInt operator +(const long long int B) const;	
+	BigInt operator -(const long long int B) const;					  
+	BigInt operator *(const long long int B) const;
+	BigInt operator /(const long long int B) const;
+	BigInt operator %(const long long int B) const;
+	BigInt operator ^(const long long int B) const;
 
 private:
 	vector<int> elements;
